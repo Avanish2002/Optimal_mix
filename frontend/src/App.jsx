@@ -1,15 +1,19 @@
-import { useState } from 'react'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Homepage from './components/Homepage';
+import TryModel from './components/TryModel'; 
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-   <div>
+    <Router>
       <Navbar />
-      
-    </div>
-  )
+      <Routes>
+        <Route path="/" element={<Homepage />} />
+        <Route path="/trymodel" element={<TryModel />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

@@ -1,0 +1,99 @@
+.trymodel {
+  padding: 2rem;
+  background: #000000;
+  color: #fff;
+  font-family: sans-serif;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-section, .grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.grid label {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+
+}
+.grid {
+  background-color: rgb(35, 32, 32);  
+  border-radius: .9rem;
+  padding: 1rem;
+}
+.grid label input, .grid label select {
+  background: #3e3e3e;
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+input, select {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  margin-top: 0.25rem;
+}
+
+.submit-btn {
+  background: #201e22;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.submit-btn:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.form-error {
+  color: #ff8b8b;
+}
+
+.results-table, .pareto-plot {
+  margin-top: 1rem;
+  background: #222;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.inputform{
+  border-radius: 1rem;
+  background-color: rgb(0, 0, 0);
+}
+.inputform h4{
+  text-align: center;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.55rem;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+/* Default reference data remains editable; it becomes fully visible on interaction. */
+.grid label input.default-input {
+  opacity: 0.55;
+  transition: opacity 0.2s ease;
+}
+
+.grid label input.default-input:hover,
+.grid label input.default-input:focus {
+  opacity: 1;
+}
